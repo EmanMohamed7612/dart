@@ -3,11 +3,15 @@
 #include<cmath>
 //#include<bits/stdc++.h>
 using namespace std;
+void division(float n1,float n2)
+{
+    	cout << "floor " << n1<< " / " << n2 << " = " << floor(n1/n2)<<"\n";
+	cout << "ceil " << n1 << " / " << n2 << " = " <<ceil(n1/n2)<<"\n";
+	cout << "round " << n1 << " / " << n2 << " = " << round(n1/n2)<<"\n";
+}
 int main()
 {
- float a,b;
-	cin >> a >> b;
-	cout << "floor " << a << " / " << b << " = " << floor(a/b)<<"\n";
-	cout << "ceil " << a << " / " << b << " = " <<ceil(a/b)<<"\n";
-	cout << "round " << a << " / " << b << " = " << round(a/b)<<"\n";
+ float n1,n2;
+	cin >> n1 >> n2;
+   division(n1,n2);
 }
