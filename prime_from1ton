@@ -1,0 +1,25 @@
+#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+void prime(int n)
+{
+    int e=0;
+    for(int i=2;i <=n;i++)
+{
+for(int j=2;j <i;j++)
+if(i%j==0)
+e++;
+if(e==0)
+cout<<i<<" ";
+e=0;
+ 
+}
+}
+int main()
+{
+int n;
+cin>>n;
+prime(n);
+ 
+return 0;
+}
