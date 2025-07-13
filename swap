@@ -1,0 +1,18 @@
+#include <iostream>
+#include <string>
+using namespace std;
+void print(int &x,int &y)
+{
+int e;
+e=x;
+x=y;
+y=e;
+}
+int main()
+{
+int  a,b;
+cin>>a>>b;
+print(a,b);
+cout<<a<<" "<<b;
+    return 0;
+}
