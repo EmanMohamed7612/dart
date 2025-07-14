@@ -1,0 +1,17 @@
+#include <iostream>
+#include<cmath>
+using namespace std;
+long long equation(int a,int b){
+      long long sum=0;
+     for(int i=2;i<=b;i+=2)
+   {
+       sum+=pow(a,i);
+   }
+   return sum;
+}
+int main() {
+   int a,b;
+   cin>>a>>b;
+   cout<<equation(a,b);
+    return 0;
+}
