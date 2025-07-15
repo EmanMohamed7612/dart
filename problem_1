@@ -1,0 +1,28 @@
+//problem 1
+enum UserRole { Admin, User }
+
+class User {
+  String? first;
+  String? last;
+  dynamic role;
+
+  User({this.first, this.last, this.role});
+}
+
+String format(User u) {
+  var first = u.first ?? '';
+  var last = u.last ?? '';
+  var name = '$first $last'.trim();
+  var finalName = name.isEmpty ? 'No Name' : name;
+
+  var role = u.role is UserRole ? '$u.role'.split('.').last : 'Unknown';
+
+  return 'Name: $finalName, Role: $role';
+}
+
+void main() {
+  print(format(User(first: 'Eman', last: 'Ali', role: UserRole.Admin)));
+  print(format(User(first: 'Sara', role: 'x')));
+  print(format(User(role: UserRole.User)));
+  print(format(User()));
+}
