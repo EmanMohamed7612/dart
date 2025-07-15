@@ -1,0 +1,24 @@
+// problem 2
+ class circle {
+   dynamic r;
+ }
+
+ class rectangle {
+   dynamic len;
+ }
+
+ dynamic area(dynamic shape) {
+   if (shape is circle) {
+     return shape.r * shape.r * 3.14;
+   } else {
+     return shape.len * shape.len;
+   }
+ }
+
+ void main() {
+   var shape = circle()..r = 3;
+   print(area(shape));
+
+   var shape1 = rectangle()..len = 3;
+   print(area(shape1));
+ }

@@ -1,0 +1,24 @@
+//problem 3 
+
+ class Card {}
+ class Cash {}
+
+ class Transaction {
+   double amount = 0;
+   String currency = '';
+   String type = '';
+ }
+
+ String pay(dynamic method, double amount, String currency) {
+   var t = Transaction()
+     ..amount = currency == 'EGP' ? amount / 30 : amount
+     ..currency = currency
+     ..type = method is Card ? 'Card' : 'Cash';
+
+   return 'Paid ${t.amount.toStringAsFixed(2)} ${t.currency} by ${t.type}';
+ }
+
+ void main() {
+   print(pay(Card(), 300, 'EGP'));  // هيتحول لـ 10 دولار
+   print(pay(Cash(), 100, 'USD'));  // يفضل 100 دولار
+ }
